@@ -2,6 +2,9 @@
   Donate to <%= @organization.name %>
 </h4>
 
+<%= render 'charges' %>
+
+
 <p>
   <%= link_to "Edit Organization", edit_organization_path(@organization), class: 'btn btn-warning btn-sm' %>
 </p>

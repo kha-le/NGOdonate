@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-organizations = Organization.create([{ name: 'WWF' }, { name: 'Amnesty' },
-  { name: 'Humane Society' }, { name: 'Audubon' }])
+organizations = Organization.create([{ name: 'WWF', price: 10, plan: 'gold' }, { name: 'Amnesty', price: 10, plan: 'gold' },
+  { name: 'Humane Society', price: 10, plan: 'gold' }, { name: 'Audubon', price: 10, plan: 'gold' }])
 
 donors = Donor.create([{ name: 'Cory' }, { name: 'Gene' }, { name: 'Kha' },
   { name: 'Chase' }])
