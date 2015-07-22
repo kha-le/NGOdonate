@@ -13,11 +13,4 @@ describe 'the organizations path' do
     click_on 'WWF'
     expect(page).to have_content 'Donate'
   end
-
-  it 'creates a new organization' do
-    visit new_organization_path
-    fill_in 'Name', with: 'Red Cross'
-    click_on 'Create Organization'
-    expect(page).to have_content 'Organization added!'
-  end
 end

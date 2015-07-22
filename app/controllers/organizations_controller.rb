@@ -39,7 +39,14 @@ class OrganizationsController < ApplicationController
   end
 
   def destroy
-
+    @organization = Organization.find params[:id]
+    if @organization.delete
+      flash[:notice] = "Organization deleted, why did you do that?!"
+      redirect_to root_path
+    else
+      flash[:notice] = "Errors!"
+      render :show
+    end
   end
 
   private
