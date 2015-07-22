@@ -12,8 +12,13 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
 gem 'bcrypt'
 gem 'will_paginate', '> 3.0'
+<<<<<<< HEAD
 
 
+=======
+gem 'protected_attributes'
+# gem 'simple_form'
+>>>>>>> master
 
 group :development do
   gem 'byebug'

@@ -1,5 +1,9 @@
 class OrganizationsController < ApplicationController
-protect_from_forgery except: :webhook
+
+  protect_from_forgery except: :webhook
+  
+  before_filter :authenticate_user!, except: [:index, :show]
+
 
   def index
     @organizations = Organization.all

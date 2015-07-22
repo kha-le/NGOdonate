@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  root to: 'organizations#index'
+
   post "registrations/hook"
 
   resources :charges
   resources :organizations
 
-  root to: 'organizations#index'
+  resources :users
+
 end
