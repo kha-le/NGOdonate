@@ -502,6 +502,14 @@
         null,
         1
       ],
+      "/Users/Guest/Desktop/NGOdonate/config/initializers/stripe.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
       "/Users/Guest/Desktop/NGOdonate/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -529,9 +537,13 @@
       ],
       "/Users/Guest/Desktop/NGOdonate/config/routes.rb": [
         1,
+        null,
         1,
         1,
         null,
+        1,
+        null,
+        1,
         1,
         null,
         1,
@@ -657,6 +669,22 @@
       "/Users/Guest/Desktop/NGOdonate/app/models/organization.rb": [
         1,
         1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/Guest/Desktop/NGOdonate/spec/models/user_spec.rb": [
@@ -668,7 +696,11 @@
       ],
       "/Users/Guest/Desktop/NGOdonate/app/controllers/organizations_controller.rb": [
         1,
+        null,
         1,
+        null,
+        1,
+        null,
         null,
         1,
         5,
@@ -717,6 +749,16 @@
         0,
         0,
         null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
         null,
         null,
         1,
@@ -735,6 +777,6 @@
         null
       ]
     },
-    "timestamp": 1437606650
+    "timestamp": 1437607612
   }
 }
