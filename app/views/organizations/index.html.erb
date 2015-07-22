@@ -1,7 +1,11 @@
-Home
+<h2>
+  Donation Station!
+</h2>
 
-<% @organizations.each do |organization| %>
-  <p><%= link_to organization.name, organization_path(organization) %></p>
-<% end %>
+<ul>
+  <% @organizations.each do |organization| %>
+    <li><%= link_to organization.name, organization_path(organization) %></li>
+  <% end %>
+</ul>
 
-<p><%= link_to "Add Organization", new_organization_path %></p>
+<p><%= link_to "Add Organization", new_organization_path, class: "btn btn-default btn-xs" %></p>
