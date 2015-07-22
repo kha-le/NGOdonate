@@ -7,4 +7,12 @@ describe 'the organizations path' do
 # save_and_open_page
     expect(page).to have_content 'WWF'
   end
+
+  it 'displays a single organization page' do
+    Organization.create name: 'WWF'
+    visit root_path
+    save_and_open_page
+    click_on 'WFF'
+    expect(page).to have_content 'Donate'
+  end
 end
