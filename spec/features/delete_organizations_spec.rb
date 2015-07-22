@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'the organizations path' do
   it 'deletes an organization' do
+    user = login_as_user
     wwf = Organization.create name: 'WWF'
     visit organization_path wwf
     click_on 'Delete'

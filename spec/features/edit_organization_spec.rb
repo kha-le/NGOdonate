@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'the organizations path' do
   it 'edits an organization' do
+    login_as_user
     wwf = Organization.create name: 'WWF'
     visit organization_path wwf
     click_on 'Edit Organization'
@@ -11,6 +12,7 @@ describe 'the organizations path' do
   end
 
   it 'fails to edit an organization when not given the name' do
+    login_as_user
     wwf = Organization.create name: 'WWF'
     visit organization_path wwf
     click_on 'Edit Organization'

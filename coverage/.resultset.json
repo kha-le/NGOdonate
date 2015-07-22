@@ -10,6 +10,14 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -24,6 +32,9 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
         null,
         null,
         null,
@@ -507,12 +518,24 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/NGOdonate/spec/factories.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/NGOdonate/config/routes.rb": [
         1,
         1,
         1,
         null,
         1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/NGOdonate/app/models/user.rb": [
@@ -521,6 +544,8 @@
         null,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/Users/Guest/Desktop/NGOdonate/app/helpers/application_helper.rb": [
@@ -538,8 +563,10 @@
         1,
         1,
         1,
+        1,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -578,8 +605,10 @@
         1,
         1,
         1,
+        1,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -638,6 +667,7 @@
         null
       ],
       "/Users/Guest/Desktop/NGOdonate/app/controllers/organizations_controller.rb": [
+        1,
         1,
         null,
         1,
@@ -700,10 +730,11 @@
         1,
         null,
         null,
+        null,
         1,
         null
       ]
     },
-    "timestamp": 1437604314
+    "timestamp": 1437606650
   }
 }
