@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
 
-  # def index
-  #
-  # end
+  def index
+    @organizations = Organization.all
+  end
 end

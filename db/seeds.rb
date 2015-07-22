@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+organizations = Organization.create([{ name: 'WWF' }, { name: 'Amnesty' },
+  { name: 'Humane Society' }, { name: 'Audubon' }])
+
+donors = Donor.create([{ name: 'Cory' }, { name: 'Gene' }, { name: 'Kha' },
+  { name: 'Chase' }])
+
+credit_cards = CreditCard.create([{ card_number: 4242424242424242 },
+  { expiration_date: Date.new(2017,2,15) }, { security_code: 187 },
+  { billing_address: '123 Main St. Portland, OR 97210' }])
