@@ -1,5 +1,7 @@
 Home
 
 <% @organizations.each do |organization| %>
-  <%= link_to organization.name, organization_path(organization) %>
+  <p><%= link_to organization.name, organization_path(organization) %></p>
 <% end %>
+
+<p><%= link_to "Add Organization", new_organization_path %></p>
