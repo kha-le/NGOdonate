@@ -1,9 +1,9 @@
 class OrganizationsController < ApplicationController
 
   protect_from_forgery except: :webhook
-  
   before_filter :authenticate_user!, except: [:index, :show]
 
+  @@amount = 857
 
   def index
     @organizations = Organization.all
@@ -11,6 +11,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
+    @amount = @@amount
   end
 
   def new
@@ -52,16 +53,6 @@ class OrganizationsController < ApplicationController
       flash[:notice] = "Errors!"
       render :show
     end
-  end
-
-  def webhook
-    event = Stripe::Event.retrieve(params["id"])
-
-    case event.type
-      when "invoice.payment_succeeded" #renew subscription
-        Organization.find_by_customer_id(event.data.object.customer).renew
-    end
-    render status: :ok, json: "success"
   end
 
   private
