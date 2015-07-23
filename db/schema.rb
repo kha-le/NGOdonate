@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722224758) do
+ActiveRecord::Schema.define(version: 20150723190642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "credit_cards", force: :cascade do |t|
-    t.integer  "card_number",     limit: 8
-    t.datetime "expiration_date"
-    t.integer  "security_code"
-    t.string   "billing_address"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
@@ -39,6 +29,13 @@ ActiveRecord::Schema.define(version: 20150722224758) do
   create_table "organizations_users", force: :cascade do |t|
     t.integer "organization_id"
     t.integer "user_id"
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
