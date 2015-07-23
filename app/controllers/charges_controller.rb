@@ -22,6 +22,7 @@ class ChargesController < ApplicationController
     # Amount in cents
     @amount = @@amount
     @organization = Organization.find(params[:organization_id])
+    # binding.pry
     @charge = Charge.create(charge_params)
 
     customer = Stripe::Customer.create(

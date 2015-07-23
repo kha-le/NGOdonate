@@ -1,3 +1,3 @@
 class Charge < ActiveRecord::Base
-  belongs_to :organizations
+  belongs_to :organization
 end
