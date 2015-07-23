@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   post "registrations/hook"
 
-  resources :charges
-  resources :organizations
-
+  resources :organizations do
+    resources :charges
+  end
   resources :users
 
 end

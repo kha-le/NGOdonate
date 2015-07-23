@@ -3,15 +3,12 @@ class OrganizationsController < ApplicationController
   protect_from_forgery except: :webhook
   before_filter :authenticate_user!, except: [:index, :show]
 
-  @@amount = 857
-
   def index
     @organizations = Organization.all
   end
 
   def show
     @organization = Organization.find(params[:id])
-    @amount = @@amount
   end
 
   def new

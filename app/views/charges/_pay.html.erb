@@ -1,4 +1,4 @@
-<%= form_tag charges_path do %>
+<%= form_tag organization_charges_path(@organization) do %>
   <article>
     <label class="amount">
       <span>Amount: $<%=number_with_precision(@amount/100.0, :precision => 2)%></span>
@@ -7,6 +7,6 @@
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"></script>
+          data-description="Donation"
+          data-amount=<%= @amount %>></script>
 <% end %>
