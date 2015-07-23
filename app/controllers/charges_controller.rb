@@ -1,26 +1,23 @@
 class ChargesController < ApplicationController
 
-  @@amount = 800
-
   def index
-    @amount = @@amount
+    @amount = @charge.amount
   end
 
   def new
     @charge = Charge.new
-    @amount = @@amount
+    @amount = @charge.amount
     @organization = Organization.find(params[:organization_id])
   end
 
   def show
     @organization = Organization.find(params[:organization_id])
     @charge = Charge.find(params[:id])
-    @amount = @@amount
+    @amount = @charge.amount
   end
 
   def create
     # Amount in cents
-    @amount = @@amount
     @organization = Organization.find(params[:organization_id])
     # binding.pry
     @charge = Charge.create(charge_params)
