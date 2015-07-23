@@ -1,7 +1,7 @@
 class OrganizationsController < ApplicationController
 
   protect_from_forgery except: :webhook
-  
+
   before_filter :authenticate_user!, except: [:index, :show]
 
 
@@ -23,7 +23,7 @@ class OrganizationsController < ApplicationController
       flash[:notice] = "Organization added!"
       redirect_to root_path
     else
-      flash[:notice] = "Errors"
+      flash[:notice] = "Error trying to create organization"
       render :new
     end
   end
@@ -38,7 +38,7 @@ class OrganizationsController < ApplicationController
       flash[:notice] = "Organization updated!"
       redirect_to organization_path(@organization)
     else
-      flash[:notice] = "Errors"
+      flash[:notice] = "Error trying to update organization."
       render :edit
     end
   end
@@ -49,14 +49,13 @@ class OrganizationsController < ApplicationController
       flash[:notice] = "Organization deleted, why did you do that?!"
       redirect_to root_path
     else
-      flash[:notice] = "Errors!"
+      flash[:notice] = "Error trying to delete organization."
       render :show
     end
   end
 
   def webhook
     event = Stripe::Event.retrieve(params["id"])
-
     case event.type
       when "invoice.payment_succeeded" #renew subscription
         Organization.find_by_customer_id(event.data.object.customer).renew
