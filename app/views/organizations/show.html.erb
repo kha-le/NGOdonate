@@ -1,15 +1,11 @@
-<h4>
-  Donate to <%= @organization.name %>
-</h4>
-<p>
-  <%= link_to "Donate", new_organization_charge_path(@organization), class: "btn btn-success btn-xs" %>
-</p>
+<h4>Donate to <%= @organization.name %></h4>
 
-<p>
-  <%= link_to "Edit", edit_organization_path(@organization), class: 'btn btn-warning btn-xs' %>
-</p>
+<p><%= link_to "Donate", new_organization_charge_path(@organization),
+      class: "btn btn-success btn-xs" %></p>
 
-<p>
-  <%= link_to "Delete", organization_path(@organization),
-      data: {confirm: 'Delete?', method: :delete}, class: 'btn btn-danger btn-xs' %>
-</p>
+<p><%= link_to "Edit", edit_organization_path(@organization),
+      class: 'btn btn-warning btn-xs' %></p>
+
+<p><%= link_to "Delete", organization_path(@organization),
+      data: { confirm: 'Delete?', method: :delete },
+      class: 'btn btn-danger btn-xs' %></p>
