@@ -2,6 +2,8 @@
   Donate to <%= @organization.name %>
 </h4>
 
+<%= render 'amount' %>
+
 <%= link_to "Donate", new_organization_charge_path(@organization) %>
 
 <p>

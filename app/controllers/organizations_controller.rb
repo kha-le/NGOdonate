@@ -10,6 +10,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
+    @charge = Charge.find(params[:id])
   end
 
   def new

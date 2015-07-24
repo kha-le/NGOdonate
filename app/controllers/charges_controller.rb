@@ -19,8 +19,6 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     @organization = Organization.find(params[:organization_id])
-    # binding.pry
-    @charge = Charge.create(charge_params)
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
@@ -29,7 +27,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => @amount,
+      :amount      => params[:amount],
       :description => "test",
       :currency    => 'usd'
     )
@@ -37,8 +35,19 @@ class ChargesController < ApplicationController
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to organization_charge_path(@organization, @charge)
+    redirect_to organization_path(@organization)
   end
+
+def update
+  @charge = Charge.find(params[:id])
+  @organization = Organization.find(params[:organization_id])
+  if @charge.update(charge_params)
+    redirect_to new_organization_charge_path(@organization, @charge)
+  else
+    flash[:notice] = "Error trying to update organization."
+    render :edit
+  end
+end
 
   private
   def charge_params
