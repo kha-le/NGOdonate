@@ -14,7 +14,7 @@ describe 'the organizations path' do
     login_as_user
     visit new_organization_path
     click_on 'Create Organization'
-    expect(page).to have_content 'Errors'
+    expect(page).to have_content 'Error'
   end
 
 
