@@ -15,7 +15,3 @@ users = User.create([{ email: 'Cory@email.com', password: '12345678' },
   { email: 'Gene@email.com', password: '12345678' },
   { email: 'Kha@email.com', password: '12345678' },
   { email: 'Chase@email.com', password: '12345678' }])
-
-credit_cards = CreditCard.create([{ card_number: 4242424242424242 },
-  { expiration_date: Date.new(2017,2,15) }, { security_code: 187 },
-  { billing_address: '123 Main St. Portland, OR 97210' }])
