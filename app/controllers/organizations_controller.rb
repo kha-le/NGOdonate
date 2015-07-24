@@ -4,7 +4,6 @@ class OrganizationsController < ApplicationController
 
   before_filter :authenticate_user!, except: [:index, :show]
 
-
   def index
     @organizations = Organization.all
   end
@@ -52,15 +51,6 @@ class OrganizationsController < ApplicationController
       flash[:notice] = "Error trying to delete organization."
       render :show
     end
-  end
-
-  def webhook
-    event = Stripe::Event.retrieve(params["id"])
-    case event.type
-      when "invoice.payment_succeeded" #renew subscription
-        Organization.find_by_customer_id(event.data.object.customer).renew
-    end
-    render status: :ok, json: "success"
   end
 
   private
