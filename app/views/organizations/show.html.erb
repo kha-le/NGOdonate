@@ -1,9 +1,9 @@
 <h4>
   Donate to <%= @organization.name %>
 </h4>
-
-<%= render 'charges' %>
-
+<p>
+  <%= link_to "Donate", new_organization_charge_path(@organization), class: "btn btn-success btn-xs" %>
+</p>
 
 <p>
   <%= link_to "Edit", edit_organization_path(@organization), class: 'btn btn-warning btn-xs' %>

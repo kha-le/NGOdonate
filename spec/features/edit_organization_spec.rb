@@ -18,6 +18,6 @@ describe 'the organizations path' do
     click_on 'Edit'
     fill_in 'Name', with: ''
     click_on 'Update Organization'
-    expect(page).to have_content 'Error'
+    expect(page).to have_content 'Errors'
   end
 end

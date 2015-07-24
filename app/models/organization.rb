@@ -1,5 +1,6 @@
 class Organization < ActiveRecord::Base
   validates_presence_of :name
+  has_many :charges
 
   def process_payment
     customer_data = {email: email, card: card_token}

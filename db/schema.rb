@@ -16,12 +16,15 @@ ActiveRecord::Schema.define(version: 20150723190642) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "charges", force: :cascade do |t|
+    t.integer "amount"
+    t.integer "organization_id"
+  end
+
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "plan"
-    t.integer  "price"
     t.date     "end_date"
     t.string   "customer_id"
   end
