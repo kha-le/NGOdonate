@@ -12,10 +12,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
 gem 'bcrypt'
 gem 'will_paginate', '> 3.0'
-
 gem 'protected_attributes'
 # gem 'simple_form'
-
 
 group :development do
   gem 'byebug'
@@ -23,8 +21,6 @@ group :development do
   gem 'spring'
   gem 'quiet_assets'
 end
-
-
 
 group :test, :development do
   gem 'rspec-rails'
