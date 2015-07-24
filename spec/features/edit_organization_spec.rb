@@ -5,7 +5,7 @@ describe 'the organizations path' do
     login_as_user
     wwf = Organization.create name: 'WWF'
     visit organization_path wwf
-    click_on 'Edit Organization'
+    click_on 'Edit'
     fill_in 'Name', with: 'World Wildlife Federation'
     click_on 'Update Organization'
     expect(page).to have_content 'updated'
@@ -15,7 +15,7 @@ describe 'the organizations path' do
     login_as_user
     wwf = Organization.create name: 'WWF'
     visit organization_path wwf
-    click_on 'Edit Organization'
+    click_on 'Edit'
     fill_in 'Name', with: ''
     click_on 'Update Organization'
     expect(page).to have_content 'Errors'
