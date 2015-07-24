@@ -640,24 +640,6 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/NGOdonate/spec/models/credit_card_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/Users/Guest/Desktop/NGOdonate/app/models/credit_card.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
       "/Users/Guest/Desktop/NGOdonate/spec/models/organization_spec.rb": [
         1,
         null,
@@ -753,7 +735,6 @@
         null,
         1,
         0,
-        null,
         0,
         null,
         0,
@@ -777,6 +758,6 @@
         null
       ]
     },
-    "timestamp": 1437607612
+    "timestamp": 1437758767
   }
 }
